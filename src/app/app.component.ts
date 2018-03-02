@@ -8,7 +8,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit {
 	displayName;
-	constructor(public authService: AuthService) { }
+	constructor(private authService: AuthService) { }
 	ngOnInit() {
 		this.authService.user.subscribe(dataLastEmmitedFromObserver => {
 			this.displayName = dataLastEmmitedFromObserver.displayName;

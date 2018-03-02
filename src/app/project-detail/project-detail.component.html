@@ -8,6 +8,6 @@
 
 <div class="form-group">
   <label>Donation Amount($): </label>
-  <input #donation>
+  <input #donation type="number">
   <button class="btn btn-outline-secondary" (click)="donate(donation.value); donation.value='';">Donate</button>
 </div>

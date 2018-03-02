@@ -19,10 +19,11 @@
       <li *ngIf="authService.isLoggedIn()">
         <a class="nav-link" (click)="authService.logout()">Logout</a>
       </li>
-      <li class="nav-link">Current User: {{displayName}}</li>
+      <li class="nav-link" *ngIf="displayName">Current User: {{displayName}}</li>
     </ul>
   </div>
 </nav>
 
-
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

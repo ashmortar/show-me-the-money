@@ -4,5 +4,7 @@
 
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)"> {{project.title}} </h3>
+    <p *ngIf="project.ended"> This project has ended</p>
+    <p *ngIf="!project.ended">Still time to support</p>
   </div>
 </div>
